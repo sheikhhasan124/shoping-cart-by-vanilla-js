@@ -1,4 +1,4 @@
-
+// product increase reduce button function 
 function updateProductNumber(product,price, isIncreasing){
     let caseInput = document.getElementById(product + '-number');
     let caseNumber = caseInput.value;
@@ -14,14 +14,15 @@ let caseTotal = document.getElementById(product + '-total');
 caseTotal.innerHTML = caseNumber * price;
 calculateTotal()
 }
+
+
+// get total product numver for calculator
 function getInputValue(product){
     let productInput = document.getElementById(product +'-number');
     let productTotal = parseInt(productInput.value);
     return productTotal
-   
-    
 }
-
+// total price calculation 
 function calculateTotal(){
   let phoenTotal = getInputValue('phone') * 1219;
   let caseTotal =  getInputValue('case')  * 69;
@@ -33,6 +34,19 @@ function calculateTotal(){
      document.getElementById('total-price').innerText = total;
     
 }
+
+// remove items 
+/* document.getElementById('remove').addEventListener('click',function(e){
+   e.target.parentNode.parentNode.parentNode.remove();
+}) */
+let removeItem = document.getElementById('remove');
+removeItem.addEventListener('click',function(event){
+let item = event.target;
+if(item.classList == 'remove-item'){
+    itemParent = item.parentNode.parentNode.parentNode;
+    itemParent.remove()
+}
+})
 
 // updat mobile  
 document.getElementById('phone-plus').addEventListener('click', function(){

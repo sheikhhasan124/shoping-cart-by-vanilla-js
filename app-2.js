@@ -14,6 +14,25 @@ let caseTotal = document.getElementById(product + '-total');
 caseTotal.innerHTML = caseNumber * price;
 calculateTotal()
 }
+function getInputValue(product){
+    let productInput = document.getElementById(product +'-number');
+    let productTotal = parseInt(productInput.value);
+    return productTotal
+   
+    
+}
+
+function calculateTotal(){
+  let phoenTotal = getInputValue('phone') * 1219;
+  let caseTotal =  getInputValue('case')  * 69;
+    let subTotal = phoenTotal + caseTotal;
+    let tax = subTotal/10;
+    let total = subTotal + tax;
+     document.getElementById('sub-total').innerText = subTotal;
+     document.getElementById('tax-amount').innerText = tax;
+     document.getElementById('total-price').innerText = total;
+    
+}
 
 // updat mobile  
 document.getElementById('phone-plus').addEventListener('click', function(){

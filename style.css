@@ -28,3 +28,24 @@ body{
     align-items: center;
     justify-content: flex-start;
 }
+.cart-item h5{
+    padding: 0 45px;
+}
+.cart-item .remove-item{
+	width: 25px!important;
+}
+.btn-default{
+	background-color: #fff;
+}
+.cart-item .form-control{
+	background-color: #F6F5FA;
+	border: none;
+    width: 65px;
+    border-radius: 10px!important;
+    font-weight: 700;
+    font-size: 20px;
+}
+.input-group{
+	width: unset;
+	flex-wrap: nowrap;
+}
